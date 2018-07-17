@@ -16,3 +16,7 @@ vim +PluginInstall +qall
 
 cd Misc-Tool-Settings
 cp .tmux.conf ~/
+
+echo "Setup Github Username & Email"
+git config --global user.name "hrwangchengdu"
+git config --global user.email "hrwangchengdu@hotmail.com"
