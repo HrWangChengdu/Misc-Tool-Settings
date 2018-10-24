@@ -21,5 +21,11 @@ echo "Setup Github Username & Email"
 git config --global user.name "hrwangchengdu"
 git config --global user.email "hrwangchengdu@hotmail.com"
 
-echo "Setup ctag"
-sudo apt-get install ctags
+if command -v ctag &> /dev/null; then
+    echo "Setup ctag"
+    if command -v apt-get &> /dev/null; then
+        sudo apt-get install ctags
+    elif command -v yum &> /dev/null; then
+        sudo yum install ctags
+    fi
+fi
