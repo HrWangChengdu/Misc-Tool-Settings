@@ -21,11 +21,18 @@ echo "Setup Github Username & Email"
 git config --global user.name "hrwangchengdu"
 git config --global user.email "hrwangchengdu@hotmail.com"
 
-if command -v ctag &> /dev/null; then
-    echo "Setup ctag"
-    if command -v apt-get &> /dev/null; then
-        sudo apt-get install ctags
-    elif command -v yum &> /dev/null; then
-        sudo yum install ctags
-    fi
+if command -v apt-get &> /dev/null; then
+    pkg_installer=apt-get
+elif command -v yum &> /dev/null; then
+    pkg_installer=yum
+fi
+
+if ! command -v ctags &> /dev/null; then
+    echo "Install ctag"
+    sudo $pkg_installer install ctags
+fi
+
+if ! command -v tmux &> /dev/null; then
+    echo "Install tmux"
+    sudo $pkg_installer install tmux
 fi
