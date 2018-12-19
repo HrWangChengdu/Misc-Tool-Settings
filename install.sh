@@ -36,5 +36,3 @@ if ! command -v tmux &> /dev/null; then
     echo "Install tmux"
     sudo $pkg_installer install tmux
 fi
-
-./mvn.sh
