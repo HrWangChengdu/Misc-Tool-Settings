@@ -1,8 +1,8 @@
 #!/bin/bash
 cd ..
 echo "Download Personal Vim Setting"
-cp vim-whr/.vimrc ~/.vimrc
 git clone https://github.com/HrWangChengdu/vim-whr.git
+cp vim-whr/.vimrc ~/.vimrc
 
 echo "Download Vim Bundle"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
