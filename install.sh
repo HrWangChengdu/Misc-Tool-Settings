@@ -29,10 +29,10 @@ fi
 
 if ! command -v ctags &> /dev/null; then
     echo "Install ctag"
-    sudo $pkg_installer install ctags
+    sudo $pkg_installer install -y ctags
 fi
 
 if ! command -v tmux &> /dev/null; then
     echo "Install tmux"
-    sudo $pkg_installer install tmux
+    sudo $pkg_installer install -y tmux
 fi
