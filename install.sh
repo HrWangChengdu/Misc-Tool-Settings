@@ -27,6 +27,7 @@ elif command -v yum &> /dev/null; then
     pkg_installer=yum
 fi
 
+sudo $pkg_installer update
 if ! command -v ctags &> /dev/null; then
     echo "Install ctag"
     sudo $pkg_installer install -y ctags
